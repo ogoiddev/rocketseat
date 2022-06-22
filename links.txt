@@ -1,0 +1,5 @@
+link FIGMA = https://www.figma.com/file/CFuDRyfASkaGRlWKY6DiMX/Plataforma-de-evento---Ignite-Lab-(Community)?node-id=8%3A399
+
+link evento = https://evento.rocketseat.com.br/ignite-lab/episodios/react/aula-1/edicao/1
+
+link Graph = https://app.graphcms.com/

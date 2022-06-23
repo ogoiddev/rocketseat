@@ -1,5 +1,6 @@
-import { gql, useQuery } from '@apollo/client'
-import Event from './pages/Event';
+import { ApolloProvider } from '@apollo/client'
+import { client } from './lib/apollo';
+import Router from './Router';
 
 // Exemplo de outra maneira de fazer uma query //
 // import { client } from './lib/apollo'
@@ -17,7 +18,10 @@ function App() {
   
 
   return (
-    <Event/>
+        <ApolloProvider client={client}>
+          
+          <Router/>
+        </ApolloProvider>
   )
 }
 

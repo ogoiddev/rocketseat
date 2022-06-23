@@ -1,5 +1,4 @@
 import { gql, useQuery } from "@apollo/client";
-import React from "react";
 import Lesson from "./Lesson";
 
 
@@ -41,7 +40,7 @@ export default function SideBar() {
             <Lesson
               key={lesson.id}
               title={lesson.title}
-              slag={lesson.slug}
+              slug={lesson.slug}
               availableAt={new Date(lesson.availableAt)}
               type={lesson.lessonType}
             />

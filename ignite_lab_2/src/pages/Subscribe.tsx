@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 import mask from '../assets/mask_main.png'
 import items from '../assets/items_main.png'
+import reactLogo from '../assets/react_logo_markdown.png'
 
 export function Subscribe() {
   const navigate = useNavigate()
@@ -71,14 +72,17 @@ export function Subscribe() {
       </div>
       </div>
 
-
+      <img
+        className="absolute top-0 w-[50%]"
+        src={reactLogo}
+        alt="" />
 
       <img
-        className="absolute bottom-0 w-[70%]"
+        className="absolute bottom-0 w-[65%]"
         src={mask}
         alt="" />
       <img
-        className="absolute bottom-0 w-[70%] opacity-75"
+        className="absolute bottom-0 w-[65%] opacity-75"
         src={items}
         alt="" />
     <Footer/>

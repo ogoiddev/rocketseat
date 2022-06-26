@@ -9,6 +9,7 @@ module.exports = {
         blur: 'url(/src/assets/blur.png)',
         mask: 'url(/src/assets/mask_main.png)',
         items: 'url(/src/assets/items_main.png)',
+        backVideo: 'url(/src/assets/Wallpaper - 1920x1080.png)'
       },
       fontFamily: {
         sans: 'Roboto, sans-serif',

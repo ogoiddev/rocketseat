@@ -1,7 +1,8 @@
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 import '@vime/core/themes/default.css';
-import { useGetLessonsBySlugQuery } from "../graphql/generated";
+import { useGetDefaultRendersQuery, useGetLessonsBySlugQuery } from "../graphql/generated";
+import Footer from "./Footer";
 
 interface VideoProps {
   lessonSlug: string;
@@ -14,7 +15,9 @@ export default function Video(props: VideoProps) {
     }
   })
 
-  if (!data || !data.lesson) {
+  const { data: dataD } = useGetDefaultRendersQuery()
+
+  if (!data || !dataD) {
     return (
       <div className="flex-1">
         <p>loading...</p>
@@ -23,11 +26,11 @@ export default function Video(props: VideoProps) {
   }
 
 return (
-    <div className="flex-1">
+    <div className="flex flex-col flex-1 relative">
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
           <Player>
-            <Youtube videoId={ data.lesson.videoId } />
+            <Youtube videoId={ data.lesson?.videoId ||dataD?.defaults[0].videoId } />
             <DefaultUi />
           </Player>
         </div>
@@ -37,23 +40,23 @@ return (
         <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2x1 font-bold">
-              {data.lesson.title}
+              {data.lesson?.title}
             </h1>
             <p className="mt-4 text-gray-200 leading-relexed">
-              {data.lesson.description}
+              {data.lesson?.description}
             </p>
 
-          {data.lesson.teacher && (
-                        <div className="flex items-center gap-4 mt-6">
+          {data.lesson?.teacher && (
+            <div className="flex items-center gap-4 mt-6">
               <img
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
-                src={data.lesson.teacher.avatarURL}
+                src={data.lesson?.teacher.avatarURL}
                 alt="Perfil de Diogo"
               /> 
               
               <div className="leading-relexed">
-                <strong className="font-bold text-2x1 block">{data.lesson.teacher.name}</strong>
-                <span className="text-gray-200 text-sm block">{data.lesson.teacher.bio}</span>
+                <strong className="font-bold text-2x1 block">{data.lesson?.teacher.name}</strong>
+                <span className="text-gray-200 text-sm block">{data.lesson?.teacher.bio}</span>
               </div>
             </div>
             )}
@@ -105,13 +108,10 @@ return (
               </div>
             </a>
 
-          <a href="">
-
-          </a>
           </div>
 
       </div>
-
+      <Footer />
     </ div>
   )
 }

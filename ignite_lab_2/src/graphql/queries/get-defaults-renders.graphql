@@ -1,0 +1,9 @@
+query GetDefaultRenders {
+  defaults {
+    slug
+    title
+    publishedAt
+    videoId
+    id
+  }
+}

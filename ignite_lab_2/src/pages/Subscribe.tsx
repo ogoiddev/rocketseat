@@ -4,6 +4,8 @@ import { Logo } from "../components/Logo";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useCreateSubscriberMutation } from "../graphql/generated";
+import mask from '../assets/mask_main.png'
+import items from '../assets/items_main.png'
 
 export function Subscribe() {
   const navigate = useNavigate()
@@ -72,12 +74,12 @@ export function Subscribe() {
 
 
       <img
-        className="w-[70%]"
-        src="/src/assets/mask_main.png"
+        className="absolute bottom-0 w-[70%]"
+        src={items}
         alt="" />
       <img
         className="absolute bottom-0 w-[70%]"
-        src="/src/assets/items_main.png"
+        src={mask}
         alt="" />
     <Footer/>
     </div>

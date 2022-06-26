@@ -6380,10 +6380,10 @@ export type CreateSubscriberMutationVariables = Exact<{
 
 export type CreateSubscriberMutation = { __typename?: 'Mutation', createSubscriber?: { __typename?: 'Subscriber', id: string } | null };
 
-export type GetDefaultRendersQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetDefaultVideoQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetDefaultRendersQuery = { __typename?: 'Query', defaults: Array<{ __typename?: 'Default', slug: string, title: string, publishedAt?: any | null, videoId: string, id: string }> };
+export type GetDefaultVideoQuery = { __typename?: 'Query', default?: { __typename?: 'Default', id: string, slug: string, title: string, updatedAt: any, videoId: string } | null };
 
 export type GetLessonsBySlugQueryVariables = Exact<{
   slug?: InputMaybe<Scalars['String']>;
@@ -6432,44 +6432,44 @@ export function useCreateSubscriberMutation(baseOptions?: Apollo.MutationHookOpt
 export type CreateSubscriberMutationHookResult = ReturnType<typeof useCreateSubscriberMutation>;
 export type CreateSubscriberMutationResult = Apollo.MutationResult<CreateSubscriberMutation>;
 export type CreateSubscriberMutationOptions = Apollo.BaseMutationOptions<CreateSubscriberMutation, CreateSubscriberMutationVariables>;
-export const GetDefaultRendersDocument = gql`
-    query GetDefaultRenders {
-  defaults {
+export const GetDefaultVideoDocument = gql`
+    query GetDefaultVideo {
+  default(where: {slug: "introduction"}) {
+    id
     slug
     title
-    publishedAt
+    updatedAt
     videoId
-    id
   }
 }
     `;
 
 /**
- * __useGetDefaultRendersQuery__
+ * __useGetDefaultVideoQuery__
  *
- * To run a query within a React component, call `useGetDefaultRendersQuery` and pass it any options that fit your needs.
- * When your component renders, `useGetDefaultRendersQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * To run a query within a React component, call `useGetDefaultVideoQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetDefaultVideoQuery` returns an object from Apollo Client that contains loading, error, and data properties
  * you can use to render your UI.
  *
  * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
  *
  * @example
- * const { data, loading, error } = useGetDefaultRendersQuery({
+ * const { data, loading, error } = useGetDefaultVideoQuery({
  *   variables: {
  *   },
  * });
  */
-export function useGetDefaultRendersQuery(baseOptions?: Apollo.QueryHookOptions<GetDefaultRendersQuery, GetDefaultRendersQueryVariables>) {
+export function useGetDefaultVideoQuery(baseOptions?: Apollo.QueryHookOptions<GetDefaultVideoQuery, GetDefaultVideoQueryVariables>) {
         const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetDefaultRendersQuery, GetDefaultRendersQueryVariables>(GetDefaultRendersDocument, options);
+        return Apollo.useQuery<GetDefaultVideoQuery, GetDefaultVideoQueryVariables>(GetDefaultVideoDocument, options);
       }
-export function useGetDefaultRendersLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetDefaultRendersQuery, GetDefaultRendersQueryVariables>) {
+export function useGetDefaultVideoLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetDefaultVideoQuery, GetDefaultVideoQueryVariables>) {
           const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetDefaultRendersQuery, GetDefaultRendersQueryVariables>(GetDefaultRendersDocument, options);
+          return Apollo.useLazyQuery<GetDefaultVideoQuery, GetDefaultVideoQueryVariables>(GetDefaultVideoDocument, options);
         }
-export type GetDefaultRendersQueryHookResult = ReturnType<typeof useGetDefaultRendersQuery>;
-export type GetDefaultRendersLazyQueryHookResult = ReturnType<typeof useGetDefaultRendersLazyQuery>;
-export type GetDefaultRendersQueryResult = Apollo.QueryResult<GetDefaultRendersQuery, GetDefaultRendersQueryVariables>;
+export type GetDefaultVideoQueryHookResult = ReturnType<typeof useGetDefaultVideoQuery>;
+export type GetDefaultVideoLazyQueryHookResult = ReturnType<typeof useGetDefaultVideoLazyQuery>;
+export type GetDefaultVideoQueryResult = Apollo.QueryResult<GetDefaultVideoQuery, GetDefaultVideoQueryVariables>;
 export const GetLessonsBySlugDocument = gql`
     query GetLessonsBySlug($slug: String) {
   lesson(where: {slug: $slug}) {

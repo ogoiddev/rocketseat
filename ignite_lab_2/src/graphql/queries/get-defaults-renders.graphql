@@ -1,9 +1,9 @@
-query GetDefaultRenders {
-  defaults {
+query GetDefaultVideo {
+  default(where: {slug: "introduction"}) {
+    id
     slug
     title
-    publishedAt
+    updatedAt
     videoId
-    id
   }
 }

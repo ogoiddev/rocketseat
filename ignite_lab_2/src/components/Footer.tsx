@@ -2,9 +2,9 @@ import logo from '../assets/logo_footer.png'
 
 function Footer() {
   return (
-    <div className="flex flex-1 justify-between items-center h-12 px-16 fixed bottom-0 w-[100%]">
+    <div className="border-box flex justify-between sticky bottom-0 bg-gray-700 p-4">
 
-      <div className="flex justify-between flex-nowrap">
+      <div className="flex justify-between flex-nowrap w-fit">
 
         <img className='w-36 mr-12' src={logo} alt="logo_site" />
         <p>{'Rocketseat - Todos os direitos reservados'}</p>

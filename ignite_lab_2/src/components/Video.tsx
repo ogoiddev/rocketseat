@@ -8,10 +8,6 @@ interface VideoProps {
   lessonSlug: string;
 }
 
-interface VideoDProps {
-  videoId: string;
-}
-
 export default function Video(props: VideoProps) {
   const { data } = useGetLessonsBySlugQuery({
     variables: {

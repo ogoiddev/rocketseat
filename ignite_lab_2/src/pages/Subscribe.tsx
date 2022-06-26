@@ -1,7 +1,5 @@
-import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { Logo } from "../components/Logo";
-import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 import mask from '../assets/mask_main.png'

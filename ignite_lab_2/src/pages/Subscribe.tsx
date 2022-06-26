@@ -85,7 +85,7 @@ export function Subscribe() {
         className="absolute bottom-0 w-[65%] opacity-75"
         src={items}
         alt="" />
-    <Footer/>
+    
     </div>
   )
 };

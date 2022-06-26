@@ -75,11 +75,11 @@ export function Subscribe() {
 
       <img
         className="absolute bottom-0 w-[70%]"
-        src={items}
+        src={mask}
         alt="" />
       <img
-        className="absolute bottom-0 w-[70%]"
-        src={mask}
+        className="absolute bottom-0 w-[70%] opacity-75"
+        src={items}
         alt="" />
     <Footer/>
     </div>

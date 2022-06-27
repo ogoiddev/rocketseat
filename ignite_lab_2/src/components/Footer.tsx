@@ -2,7 +2,7 @@ import logo from '../assets/logo_footer.png'
 
 function Footer() {
   return (
-    <div className="border-box flex justify-between sticky bottom-0 bg-gray-700 p-4">
+    <div className="flex justify-between sticky bottom-0 bg-gray-900 p-4 pt-12 mt-4">
 
       <div className="flex justify-between flex-nowrap w-fit">
 

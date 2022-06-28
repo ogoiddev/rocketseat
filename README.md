@@ -34,4 +34,4 @@ npm run dev
 ```
 
 
-### Feito muito muito carinho / Lot of passion here
+### Feito muito muito carinho / Lot of passion here - @ogoiddev

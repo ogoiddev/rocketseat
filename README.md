@@ -24,7 +24,7 @@ ignite-lab - WebPage with React-Ts and GraphQL
 
 ##### starting like below, you can check the code working in localhost:
 ```
-1. bash $ git clone https://github.com/andrelinos/Ignite-Lab-02
+1. bash $ git clone git@github.com:ogoiddev/rocketseat.git
 ```
 ```
 2. bash $ npm install

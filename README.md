@@ -17,6 +17,7 @@ ignite-lab - WebPage with React-Ts and GraphQL
 
 ![Screenshot](1.jpg)
 <hr/>
+<br/>
 ![Screenshot](3.jpg)
 
 ## Iniciando ##

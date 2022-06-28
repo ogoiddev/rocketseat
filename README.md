@@ -24,13 +24,13 @@ ignite-lab - WebPage with React-Ts and GraphQL
 
 ##### starting like below, you can check the code working in localhost:
 ```
-1. bash $ git clone git@github.com:ogoiddev/rocketseat.git
+1. $ git clone git@github.com:ogoiddev/rocketseat.git
 ```
 ```
-2. bash $ npm install
+2. $ npm install
 ```
 ```
-3. bash $ npm run dev
+3. $ npm run dev
 ```
 
 

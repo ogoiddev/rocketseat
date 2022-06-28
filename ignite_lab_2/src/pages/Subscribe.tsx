@@ -74,15 +74,15 @@ export function Subscribe() {
         className="absolute top-0 w-[40%]"
         src={reactLogo}
         alt="" />
-
-      <img
-        className="absolute bottom-0 w-[60%]"
-        src={mask}
-        alt="" />
-      <img
-        className="absolute bottom-0 w-[65%] opacity-75"
-        src={items}
-        alt="" />
+      <div className="w-[60%] relative">
+        <img
+          src={mask}
+          alt="" />
+        <img
+          className="absolute bottom-0 w-[100%] opacity-75"
+          src={items}
+          alt="" />
+      </div>
     
     </div>
   )

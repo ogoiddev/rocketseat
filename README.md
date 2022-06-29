@@ -1,4 +1,4 @@
-# rocketseat
+# Rocketseat - challenge
 ignite-lab - WebPage with React-Ts and GraphQL
 
 ## Tecnologias / _technologies_

@@ -1,5 +1,5 @@
 # Rocketseat - challenge
-ignite-lab - WebPage with React-Ts and GraphQL
+ignite-lab - WebPage with React-Ts and GraphQL - checkout! => [Site](https://rocketseat-event-ogoiddev.vercel.app/)
 
 ## Tecnologias / _technologies_
 - [React](https://pt-br.reactjs.org/)
